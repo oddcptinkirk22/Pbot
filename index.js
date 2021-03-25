@@ -100,19 +100,19 @@ if(command === `${prefix}botinfo`){
 };
 
 
-if(command === `${prefix}serverhelp`){
-  const embed = new Discord.MessageEmbed()
-  .setColor(`#FF0000`)
-  .setTitle(`Thank you for useing CaveCraft, if you need help with anything please use the #support channel or go to our website "url here"`)
-  message.author.send(embed);
+if(command === `${prefix}help`){
+  const bitch = new Discord.MessageEmbed()
+  .setTitle("Help Commands")
+  .addField("Ping", "Pong")
+  .addField("uptime", "shows how long the bot has been online")
+  .addField("userinfo", "shows when your account was made, shows your account ID, and your full username")
+  message.channel.send(bitch)
 }
+})
 
 
 
 
 
 
-
-
-
-bot.login(process.env.TOKEN)})});
+bot.login(process.env.TOKEN)});
