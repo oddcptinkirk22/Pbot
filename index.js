@@ -103,9 +103,14 @@ if(command === `${prefix}botinfo`){
 if(command === `${prefix}help`){
   const bitch = new Discord.MessageEmbed()
   .setTitle("Help Commands")
-  .addField("Ping", "Pong")
-  .addField("uptime", "shows how long the bot has been online")
-  .addField("userinfo", "shows when your account was made, shows your account ID, and your full username")
+  .addField("!Ping", "Pong")
+  .addField("!uptime", "shows how long the bot has been online")
+  .addField("!userinfo", "shows when your account was made, shows your account ID, and your full username")
+  .addField("!hot", "Sends random gif from r/randomsexygifs")
+  .addField("!meme", "Sends random meme")
+  .addField("!gif", "sends random gif ")
+  .addField("!random", "Sends random things from all of reddit")
+  .addField("!sucks", "Sends random gif or pic from r/wellthatsucks")
   message.channel.send(bitch)
 }
 })
