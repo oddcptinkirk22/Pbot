@@ -102,17 +102,27 @@ if(command === `${prefix}botinfo`){
 
 if(command === `${prefix}help`){
   const bitch = new Discord.MessageEmbed()
+  .setColor(`#000066`)
   .setTitle("Help Commands")
+  .addField("!server", "sends server invite/shows some server info ")
   .addField("!Ping", "Pong")
   .addField("!uptime", "shows how long the bot has been online")
   .addField("!userinfo", "shows when your account was made, shows your account ID, and your full username")
-  .addField("!hot", "Sends random gif from r/randomsexygifs")
   .addField("!meme", "Sends random meme")
+  .addField("!hot", "Sends random gif from r/randomsexygifs")
   .addField("!gif", "sends random gif ")
   .addField("!random", "Sends random things from all of reddit")
   .addField("!sucks", "Sends random gif or pic from r/wellthatsucks")
   message.channel.send(bitch)
 }
+
+ if(command ===`${prefix}server`){
+   const embed = new Discord.MessageEmbed()
+   .setColor(`#000066`)
+   .setTitle("Discord invite")
+   .setURL(`https://discord.gg/7YZFgvTV3R`)
+   message.channel.send(embed)
+ }
 })
 
 

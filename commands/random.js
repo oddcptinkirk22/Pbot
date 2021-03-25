@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
     const img = await randomPuppy(random);
 
     const embed = new Discord.MessageEmbed()
+    .setColor(`#000066`)
     .setImage(img)
     .setTitle(`from /r/${random}`)
     .setURL(`https://reddit.com/${random}`)

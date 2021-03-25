@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let embedUserInfo = new discord.MessageEmbed()
     .setAuthor(target.username)
     .setDescription(`this is **${target.username}**'s User Info`)
-    .setColor("#0000ff")
+    .setColor("#000066")
     .addField("full username", `${target.username}#${target.discriminator}`)
     .addField("Mention", target)
     .addField("ID", target.id)
