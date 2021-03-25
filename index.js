@@ -112,33 +112,7 @@ if(command === `${prefix}serverhelp`){
 
 
 
-if(command === `${prefix}purge`)
-{
-    purge();
-    async function purge(){
-       message.delete(); // deletes the command message
-
-       const args = message.content.slice(prefix.length).trim().split(' ');
-       const command = args.shift().toLowerCase();
-
-       if(!message.member.roles.cache.some(r => r.name === "Purge")) {
-           message.channel.send('You Cannot use this command');
-           return;
-       }
-
-       if(isNaN(args[0])){
-           // Sends a message to the channel
-           message.channel.send('Please use a number as your arguments');
-           // returns so the rest of the code doesn't run
-           return;
-       }
-
-       message.channel.bulkDelete(args[0])
-       .catch(error => message.channel.send(Error, `${error}`));
-}
-}
-})
 
 
 
-bot.login(process.env.TOKEN)});
+bot.login(process.env.TOKEN)})});
