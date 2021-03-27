@@ -1,6 +1,6 @@
 const discord = require("discord.js"); 
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (Client, message, args) => {
     function duration(ms){
         const sec = Math.floor((ms / 1000) %60).toString()
         const min = Math.floor((ms / (1000 * 60)) % 60).toString()
@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         return `${days.padStart(1, `0`)} days, ${hrs.padStart(2, `0`)} hours, ${min.padStart(2, `0`)} minutes, ${sec.padStart(2, `0`)} seconds`
     }
 
-    message.channel.send(`i have been alive for: ${duration(bot.uptime)}`)
+    message.channel.send(`i have been alive for: ${duration(Client.uptime)}`)
 
   }
 

@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (Client, message, args) => {
     console.log("running UserInfo Command!");
 
     let target = message.author;
